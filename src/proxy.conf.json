@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://10.126.142.7/distance",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

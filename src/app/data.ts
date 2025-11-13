@@ -18,11 +18,6 @@ export class Data {
         delay(1250),
         repeat(),
       )
-    // return interval(1250).pipe(
-    //   startWith(0),
-    //   switchMap(() => this.http.get<any>(this.url)),
-    //   tap(data => console.log(data))
-    //   );
   }
 
 }

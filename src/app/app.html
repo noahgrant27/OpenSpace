@@ -7,6 +7,7 @@
 </head>
 <body>
   <div class="container-fluid min-vh-100">
+  @if (!showPoll) {
   <div class="row heading">
     <h1 class="h1">OpenSpace</h1>
   </div>
@@ -39,6 +40,14 @@
     </div>
   </div>
   <!-- <div class="row m-3">Deck 1</div> -->
+  <div class="row">
+    <button (click)="showPollView()" class="h-75">Send Feedback</button>    
+  </div>
+  } @else {
+  <div>
+    <app-poll></app-poll>
+  </div>
+}
 </div>
 </body>
 </html>

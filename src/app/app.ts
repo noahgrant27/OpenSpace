@@ -15,7 +15,14 @@ import { isPlatformBrowser, NgIf } from '@angular/common';
 
 export class App implements OnInit {
   public distanceVal: any = null;
+<<<<<<< HEAD
 
+=======
+  public originalDistance: any = null;
+  public currentSpace: number = 750;
+  
+  private x:number = 20;
+>>>>>>> b887d350bc87995a0e72330132b59ccafecc63c2
   private dataSubscription: Subscription | null = null;
   private data = inject(Data);
   showPoll = false;
@@ -32,7 +39,12 @@ export class App implements OnInit {
       .subscribe({
         next: (data) => {
           console.log("COMPONENT", data);
+          this.originalDistance = this.distanceVal;
           this.distanceVal = data;
+          console.log(this.originalDistance, " ", this.distanceVal)
+          if(this.originalDistance - this.distanceVal > this.x) {
+            this.currentSpace--;
+          }
         },
         error: (err) => {
           console.log(err);

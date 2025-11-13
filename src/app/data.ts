@@ -16,8 +16,15 @@ export class Data {
 
     return defer(() => this.http.get<any>(this.url)).pipe(
         delay(1250),
+<<<<<<< HEAD
         repeat(),
       )
+=======
+        repeat()
+      );
   }
-
+  public changeSpaceCount() {
+    return defer(() => this.http.get<any>(this.url));
+>>>>>>> b887d350bc87995a0e72330132b59ccafecc63c2
+  }
 }

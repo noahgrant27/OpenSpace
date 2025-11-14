@@ -7,7 +7,7 @@ import { concatMap, delay, repeat } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class Data {
-  public ESP32_IP = "10.126.142.7";
+  public ESP32_IP = "10.254.135.7";
   private url = "api/distance";
   // "http://"  + this.ESP32_IP + "/distance";
 
@@ -15,7 +15,7 @@ export class Data {
   public getDistance(): Observable<any> {
 
     return defer(() => this.http.get<any>(this.url)).pipe(
-        delay(1250),
+        delay(750),
         repeat()
       );
   }

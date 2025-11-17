@@ -7,35 +7,127 @@
 </head>
 <body>
   <div class="container-fluid min-vh-100">
-  @if (!showPoll) {
-  <div class="row heading">
-    <h1 class="h1">Central Campus</h1>
-  </div>
-    <div class="row">
-    <div class="col-4 first"><div class="center">
-      <img src="Lot1.png">
-    </div></div>
-    <div class="col-4 second"><div class="center">Parking Deck 1</div></div>
-    <div class="col-4 third"><div class="center">
-      <img src="green.png">
-      <img src="yellow.png">
+    @if (!showPoll) {
+      <div class="row heading">
+        <h1 class="h1">Central Campus</h1>
+      </div>
+      <div class="row center">
+        <div class="col-4 first">
+          <div class="center">
+            <img src="Lot1.png">
+          </div>
+        </div>
+        <div class="col-4 second">
+          <div class="center">Parking Deck 1</div>
+        </div>
+        <div class="col-4 third">
+          <div class="center">
+        @if (currentSpace > 749) {
+            <img src="green.png">
+        } @else {
+            <img src="yellow.png">
+        }
+          </div>
+        </div>
+      </div>
+      <div class="row center address">1321 Charlottetown Ave, Charlotte,<br> NC 28024</div>
 
-    </div></div>
-  </div>
-  <div class="row center">Address</div>
-    <div class="row">
+      <div class="row center">
+        <div class="col-4 first">
+          <div class="center">
+            <img src="Lot1.png">
+          </div>
+        </div>
+        <div class="col-4 second">
+          <div class="center">Parking Deck 2</div>
+        </div>
+        <div class="col-4 third">
+          <div class="center">
+        @if (currentSpace > 749) {
+            <img src="green.png">
+        } @else {
+            <img src="yellow.png">
+        }
+          </div>
+        </div>
+      </div>
+      <div class="row center address">1108 Charlottetown Ave, Charlotte,<br> NC 28024</div>
+
+      <div class="row center">
+        <div class="col-4 first">
+          <div class="center">
+            <img src="Lot1.png">
+          </div>
+        </div>
+        <div class="col-4 second">
+          <div class="center">Parking Deck 3</div>
+        </div>
+        <div class="col-4 third">
+          <div class="center">
+        @if (currentSpace > 749) {
+            <img src="green.png">
+        } @else {
+            <img src="yellow.png">
+        }
+          </div>
+        </div>
+      </div>
+      <div class="row center address">1345 E. 4th St, Charlotte, NC 28204</div>
+
+      <div class="row center">
+        <div class="col-4 first">
+          <div class="center">
+            <img src="Lot1.png">
+          </div>
+        </div>
+        <div class="col-4 second">
+          <div class="center">Parking Deck 4</div>
+        </div>
+        <div class="col-4 third">
+          <div class="center">
+        @if (currentSpace > 749) {
+            <img src="green.png">
+        } @else {
+            <img src="yellow.png">
+        }
+          </div>
+        </div>
+      </div>
+      <div class="row center address">1225 E. 4th St, Charlotte, NC 28204</div>
+
+      <div class="row center">
+        <div class="col-4 first">
+          <div class="center">
+            <img src="Lot1.png">
+          </div>
+        </div>
+        <div class="col-4 second">
+          <div class="center">Parking Deck 5</div>
+        </div>
+        <div class="col-4 third">
+          <div class="center">
+        @if (currentSpace > 749) {
+            <img src="green.png">
+        } @else {
+            <img src="yellow.png">
+        }
+          </div>
+        </div>
+      </div>
+      <div class="row center address">130 N Kings Dr, 28204</div>
+
+  <!-- <div class="row">
     <div class="col-4 first"><div class="center">
       <img src="Lot2.png">
     </div></div>
     <div class="col-4 second"><div class="center">Parking Deck 2</div></div>
     <div class="col-4 third"><div class="center">
       <img src="green.png">
-      <!-- <img src="yellow.png"> -->
 
     </div></div>
   </div>
   <div class="row center">Address</div>
-      <div class="row">
+  <div class="row">
     <div class="col-4 first"><div class="center">
       <img src="Lot3.png">
 
@@ -43,21 +135,19 @@
     <div class="col-4 second"><div class="center">Parking Deck 3</div></div>
     <div class="col-4 third"><div class="center">
       <img src="green.png">
-      <!-- <img src="yellow.png"> -->
 
     </div></div>
   </div>
   <div class="row center">Address</div>
-      <div class="row">
+  <div class="row">
     <div class="col-4 first">
       <div class="center">
         <img src="Lot4.png">
+      </div>
     </div>
-  </div>
     <div class="col-4 second"><div class="center">Parking Deck 4</div></div>
     <div class="col-4 third"><div class="center">
       <img src="green.png">
-      <!-- <img src="yellow.png"> -->
 
     </div></div>
   </div>
@@ -67,22 +157,21 @@
       <img src="Lot5.png">
     </div>
   </div>
-    <div class="col-4 second"><div class="center">Parking Deck 5</div></div>
-    <div class="col-4 third"><div class="center">
-      <img src="green.png">
-      <!-- <img src="yellow.png"> -->
+  <div class="col-4 second"><div class="center">Parking Deck 5</div></div>
+  <div class="col-4 third"><div class="center">
+    <img src="green.png">
 
-    </div></div>
-  </div>
-  <div class="row center">Address</div>
-  <div class="row">
-    <button (click)="showPollView()" class="h-75">Send Feedback</button>    
-  </div>
-  } @else {
+  </div></div>
+</div>
+<div class="row center">Address</div> -->
+<div class="row">
+  <button (click)="showPollView()" class="h-75">Send Feedback</button>    
+</div>
+} @else {
   <div>
     <app-poll></app-poll>
   </div>
 }
-</div>
+  </div>
 </body>
 </html>

@@ -17,6 +17,7 @@ html, body {
 	display: flex;
 }
 .center {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
@@ -34,4 +35,7 @@ html, body {
 }
 .third {
 	padding-left: 0;
+}
+.address {
+	font-weight: 400;
 }

@@ -28,7 +28,6 @@ export class App implements OnInit {
 
   showPollView() {
     this.showPoll = !this.showPoll;
-    console.log(this.showPoll);
   }
   ngOnInit(): void {
       this.dataSubscription = this.data.getDistance()
